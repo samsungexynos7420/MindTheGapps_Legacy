@@ -2,8 +2,8 @@
 Normally if you have Lineage recovery or a supported device, flashing the recommended Gapps package, MindTheGapps, is easy as flashing or sideloading the zip file. However, if we use TWRP on a legacy device, we run into problems.
 
 Normally you will encounter this error:
-Could not mount /mnt/system! Aborting
-Updater process ended with ERROR: 1
+> Could not mount /mnt/system! Aborting <BR>
+> Updater process ended with ERROR: 1
 
 This prevents us from installing the package. This is because in the install script, it fails to get the /system mount and instead gets a different mount, something like /usbstorage or something instead.
 
@@ -21,3 +21,7 @@ There is a simple fix for this however.
 6. Flash the modded package and it should work
 
 This repo is here to document this process, and to also provide already modded packages for those who either don't want to do this, or you just cannot do it for whatever reason. 
+
+# Downloads
+[Android 13 ARM64]: https://github.com/samsungexynos7420/MindTheGapps_Legacy/releases/download/13arm64-20231025_200931/MindTheGapps_Legacy-13.0.0-arm64-20231025_200931.zip "MindTheGapps_Legacy-13.0.0-arm64-20231025_200931.zip" 
+[Android 13 ARM64]
