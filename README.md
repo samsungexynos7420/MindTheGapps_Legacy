@@ -5,7 +5,7 @@ Normally you will encounter this error:
 > Could not mount /mnt/system! Aborting <BR>
 > Updater process ended with ERROR: 1
 
-This prevents us from installing the package. This is because in the install script, it fails to get the /system mount and instead gets a different mount, something like /usbstorage or something instead.
+This prevents us from installing the package. This is because in the install script, it fails to get the /system mount point, so cannot continue with the install.  
 
 There is a simple fix for this however.
 
@@ -16,7 +16,7 @@ There is a simple fix for this however.
 4. Find the get_block_for_mount_point() function and replace the contents with
    ```
    cat /etc/recovery.fstab | cut -d '#' -f 1 | grep /system | grep -o '/dev/[^ ]*' | head -1
-   
+   ```
 5. Save and re-compress as a zip file
 6. Flash the modded package and it should work
 
